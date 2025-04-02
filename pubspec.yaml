@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_core: ^3.13.0
   firebase_auth: ^5.5.2
+  cloud_firestore: ^5.6.6
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,7 @@ flutter:
 
   assets:
      - assets/images/messenger.png
+     - assets/images/user.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
