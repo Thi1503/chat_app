@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "170646443550",
+    "firebase_url": "https://flutter-prep-a3c7b-default-rtdb.firebaseio.com",
+    "project_id": "flutter-prep-a3c7b",
+    "storage_bucket": "flutter-prep-a3c7b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170646443550:android:5b2f983cb3d4ee8181400f",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAyI60drFBAnLC0PRNlGnSjAywRf0jvkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
