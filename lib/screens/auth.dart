@@ -18,7 +18,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   var _isLogin = true;
   var _enteredEmail = '';
-  var _enteredUsername ='';
+  var _enteredUsername = '';
   var _enteredPassword = '';
   String imageUrl =
       'https://static.vecteezy.com/system/resources/thumbnails/008/442/086/small_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg';
@@ -47,6 +47,8 @@ class _AuthScreenState extends State<AuthScreen> {
             email: _enteredEmail, password: _enteredPassword);
         print(userCredentials);
 
+
+        // lưu data vào Firestore Database
         await FirebaseFirestore.instance
             .collection('users')
             .doc(userCredentials.user!.uid)
@@ -120,23 +122,23 @@ class _AuthScreenState extends State<AuthScreen> {
                               _enteredEmail = value!;
                             },
                           ),
-                          if(!_isLogin)
-                          TextFormField(
-                            decoration:
-                                const InputDecoration(labelText: 'User name'),
-                            enableSuggestions: false,
-                            validator: (value) {
-                              if (value == null ||
-                                  value.isEmpty ||
-                                  value.trim().length < 4) {
-                                return 'Please enter at least 4 characters.';
-                              }
-                              return null;
-                            },
-                            onSaved: (value){
-                              _enteredUsername = value!;
-                            },
-                          ),
+                          if (!_isLogin)
+                            TextFormField(
+                              decoration:
+                                  const InputDecoration(labelText: 'User name'),
+                              enableSuggestions: false,
+                              validator: (value) {
+                                if (value == null ||
+                                    value.isEmpty ||
+                                    value.trim().length < 4) {
+                                  return 'Please enter at least 4 characters.';
+                                }
+                                return null;
+                              },
+                              onSaved: (value) {
+                                _enteredUsername = value!;
+                              },
+                            ),
                           TextFormField(
                             decoration:
                                 const InputDecoration(labelText: 'Password'),
